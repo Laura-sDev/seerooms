@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1013770255464",
+    "project_id": "seeroms",
+    "storage_bucket": "seeroms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1013770255464:android:996296aa35165400664fdd",
+        "android_client_info": {
+          "package_name": "com.example.seerooms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1013770255464-e80n60jhrkoton1of557bo2ppvdgkeb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0BgdJw6yvHFHO9pIFm5mdMNg88uotpig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1013770255464-e80n60jhrkoton1of557bo2ppvdgkeb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
