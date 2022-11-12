@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:seerooms/page/login_page.dart';
+import 'package:seerooms/page/offer_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SeeRooms',
-      home: LoginPage(),
+      home: OfferPage(),
     );
   }
 }
