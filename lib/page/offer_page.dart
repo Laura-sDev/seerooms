@@ -100,36 +100,55 @@ class OfferPage extends StatelessWidget {
             const Divider(
               height: 18.0,
             ),
-            const CircleAvatar(
-              radius: 80.0,
-              backgroundImage: AssetImage('images/user.png'),
-            ),
             const Text(
               'Calvin Cordozar (Alfitrion)',
               style: TextStyle(fontFamily: 'IMFellEnglish', fontSize: 20.0),
             ),
             SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
-                  ),
-                  onPressed: () {
-                    print('Diste Click');
-                  },
-                  child: const Text(
-                    'Hacer Reserva',
-                    style: TextStyle(
-                      color: Color(0xFFFFFB00),
-                      fontFamily: 'Lato',
-                      fontSize: 30.0,
-                    ),
-                    ),
+              width: double.infinity,
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.black),
                 ),
-              )
+                onPressed: () => _dialogBuilder(context),
+                child: const Text(
+                  'Hacer Reserva',
+                  style: TextStyle(
+                    color: Color(0xFFFFFB00),
+                    fontFamily: 'Lato',
+                    fontSize: 30.0,
+                  ),
+                ),
+              ),
+            )
           ],
         ));
   }
+}
+
+Future<void> _dialogBuilder(BuildContext context) {
+  return showDialog<void>(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        //title: const Text('Basic dialog title'),
+        title: const Text('El anfitrión se comunicará de forma\n'
+            ' oportuna para concretar detalles.\n'),
+        actions: <Widget>[
+          TextButton(
+            style: TextButton.styleFrom(
+              textStyle: Theme.of(context).textTheme.labelLarge,
+            ),
+            child: const Text('Ok'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
 }
 
 class SectionTitle extends StatelessWidget {
